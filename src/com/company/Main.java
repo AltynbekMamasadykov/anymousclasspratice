@@ -15,6 +15,8 @@ public class Main {
         jana baardyk tilderde metoddordun resultatyn konsolgo chygarynyz
        */
 
+        //-------------- first version ----------------------------------
+
         GreetingsInAllLanguages.FrenchGreetings fr = new GreetingsInAllLanguages.FrenchGreetings();
         fr.greet();
         fr.greetSomeone("Altynbek");
@@ -23,13 +25,22 @@ public class Main {
         eng.greet();
         eng.greetSomeone("Altynbek");
 
-        GreetingsInAllLanguages.SpanishGreetings esp = new GreetingsInAllLanguages.SpanishGreetings();
-        esp.greet();
-        esp.greetSomeone("Altynbek");
+        // -------------- second version (i think better realisation version) ---------------
 
-        GreetingsInAllLanguages.KyrgyzGreetings kg = new GreetingsInAllLanguages.KyrgyzGreetings();
-        kg.greet();
-        kg.greetSomeone("Алтынбек");
+        Greetings turkishGreetings = new Greetings() {
+            @Override
+            public void greet() {
+                System.out.println("Merhaba");
+            }
+
+            @Override
+            public void greetSomeone(String someone) {
+                System.out.println("Merhaba "+someone);
+            }
+        };
+
+        turkishGreetings.greet();
+        turkishGreetings.greetSomeone("Altynbek");
 
     }
 }
